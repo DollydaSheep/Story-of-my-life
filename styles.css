@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: 'PT Sans';
+    color: white;
+    letter-spacing: 0.5em;
+    position: fixed;
+}
+.main{
+    width: 100%;
+    height: 2000vh;
+    animation: backgroundColor linear forwards;
+    animation-timeline: scroll();
+}
+.rocket-svg{
+    position: fixed;
+    top: 16em;
+    left: 8em;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    animation: ballMoving linear forwards;
+    animation-timeline: scroll();
+}
+.asteroid-svg{
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    right: 0;
+    bottom: 100%;
+    z-index: 1;
+    animation: asteroid linear forwards;
+    animation-timeline: scroll();
+}
+.sun{
+    position: fixed;
+    top: 20%;
+    right: 20%;
+    background-color: rgb(237, 238, 166);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 1px 10px 100px rgb(237, 238, 166);
+    z-index: 5;
+    animation: sun linear forwards;
+    animation-timeline: scroll();
+}
+.earth-svg{
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    top: 13em;
+    left: 5em;
+    z-index: 1;
+    animation: earth linear forwards;
+    animation-timeline: scroll();
+}
+.satellite-svg{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    top: 4em;
+    animation: satellite linear forwards;
+    animation-timeline: scroll();
+}
+.planet-1{
+    position: fixed;
+    top: 30%;
+    right: 30%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 8;
+    background-color: rgb(139, 101, 51);
+    animation: planet1Moving linear forwards;
+    animation-timeline: scroll();
+}
+.planet-2{
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    z-index: 0;
+    background-color: rgba(145, 136, 124, 0.493);
+    animation: planet2Moving linear forwards;
+    animation-timeline: scroll();
+}
+.stars1{
+    object-fit: cover;
+    position: fixed;
+    opacity: 0.2;
+    animation: stars linear forwards;
+    animation-timeline: scroll();
+}
+.stars2{
+    object-fit: cover;
+    position: fixed;
+    right: 10%;
+    left: 0;
+    opacity: 0.1;
+    animation: stars-2 linear forwards;
+    animation-timeline: scroll();
+}
+.card-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 5em;
+    left: 14em;
+    width: 350px;
+    height: 175px;
+    background-color: white;
+    animation: card-1 linear forwards;
+    animation-timeline: scroll();
+}
+.card-1 img{
+    width: 150px;
+    height: 150px;
+    margin-right: 1em;
+}.card-1 h1:nth-child(1){
+    margin-top: 5em;
+    position: relative;
+    color: black;
+    letter-spacing: 0;
+    font-size: 18px;
+}
+.card-1 h1:nth-child(2){
+    position: relative;
+    color: black;
+    letter-spacing: 0;
+    font-size: 18px;
+    font-weight: 100;
+}
+.brother{
+    position: fixed;
+    opacity: 0.3;
+    bottom: 0;
+    animation: brother linear forwards;
+    animation-timeline: scroll();
+}
+.basketball{
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    left: 14em;
+    bottom: 6em;
+    animation: likesBasketball linear forwards;
+    animation-timeline: scroll();
+}
+.headset{
+    position: fixed;
+    width: 200px;
+    height: 250px;
+    left: 32em;
+    bottom: 8em;
+    animation: headset linear forwards;
+    animation-timeline: scroll();
+}
+.other-things{
+    position: fixed;
+    width: 300px;
+    height: 200px;
+    left: 40em;
+    bottom: 6em;
+    animation: otherThings linear forwards;
+    animation-timeline: scroll();
+}
+.worry{
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    bottom: 0em;
+    left: 4em;
+    animation: worry linear forwards;
+    animation-timeline: scroll();
+}
+
+
+/* TEXT */
+.takeoff{
+    letter-spacing: 1em;
+    position: fixed;
+    top: 8em;
+    left: 5em;
+    overflow: hidden;
+    animation: takeoff linear forwards;
+    animation-timeline: scroll();
+}
+.text-born{
+    letter-spacing: 0;
+    position: fixed;
+    top: 4em;
+    left: 3em;
+    overflow-x: hidden;
+    animation: born linear forwards;
+    animation-timeline: scroll();
+}
+.text-dreams{
+    letter-spacing: 0;
+    position: fixed;
+    top: 5em;
+    left: 5em;
+    overflow-x: hidden;
+    animation: dreams linear forwards;
+    animation-timeline: scroll();
+}
+.text-bro{
+    letter-spacing: 0;
+    position: fixed;
+    top: 4em;
+    left: 3em;
+    width: 500px;
+    animation: bro linear forwards;
+    animation-timeline: scroll();
+}
+.text-basket{
+    letter-spacing: 0;
+    position: fixed;
+    top: 4em;
+    left: 3em;
+    width: 500px;
+    animation: basket linear forwards;
+    animation-timeline: scroll();
+}
+.text-music{
+    letter-spacing: 0;
+    position: fixed;
+    top: 5em;
+    left: 5em;
+    width: 500px;
+    animation: music linear forwards;
+    animation-timeline: scroll();
+}
+.text-other{
+    letter-spacing: 0;
+    position: fixed;
+    top: 5em;
+    left: 8em;
+    width: 500px;
+    animation: other linear forwards;
+    animation-timeline: scroll();
+}
+.text-worry{
+    letter-spacing: 0;
+    position: fixed;
+    width: 600px;
+    top: 4em;
+    left: 3em;
+    animation: textWorry linear forwards;
+    animation-timeline: scroll();
+}
+.text-matter{
+    letter-spacing: 0;
+    position: fixed;
+    width: 600px;
+    top: 6em;
+    left: 3em;
+    animation: textMatter linear forwards;
+    animation-timeline: scroll();
+}
+.text-journey{
+    letter-spacing: 0.2em;
+    font-weight: 100;
+    position: fixed;
+    top: 8em;
+    left: 8em;
+    animation: journey linear forwards;
+    animation-timeline: scroll();
+}
+.tip{
+    letter-spacing: 0.1;
+    font-size: 16px;
+    position: fixed;
+    top: 4em;
+    left: 4em;
+    color: rgba(182, 182, 182, 0.801);
+    animation: tip linear forwards;
+    animation-timeline: scroll();
+}
+
+@keyframes tip {
+    0%{
+        opacity: 1;
+    }
+    2%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes satellite{
+    0%{
+        transform: translateX(-100%) translateY(100%) scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(1000%) translateY(-80%) scale(0.3);
+        opacity: 0.6;
+    }
+}
+
+@keyframes journey {
+    0%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 0;
+    }
+    94%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes textMatter{
+    0%{
+        opacity: 0;
+    }
+    81%{
+        opacity: 0;
+    }
+    84%{
+        opacity: 1;
+    }
+    87%{
+        opacity: 1;
+    }
+    91%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes textWorry{
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    73%{
+        opacity: 1;
+    }
+    79%{
+        opacity: 1;
+    }
+    82%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+
+}
+
+@keyframes worry{
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+        transform: scale(1);
+    }
+    73%{
+        opacity: 0.3;
+        transform: scale(1.1);
+    }
+    85%{
+        opacity: 0.3;
+        transform: scale(1.2);
+    }
+    88%{
+        opacity: 0;
+        transform: scale(1.3);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes otherThings {
+    0%{
+        opacity: 0;
+    }
+    63%{
+        opacity: 0;
+    }
+    64%{
+        opacity: 1;
+    }
+    68%{
+        opacity: 1;
+    }
+    69%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes headset {
+    0%{
+        opacity: 0;
+    }
+    59%{
+        opacity: 0;
+    }
+    61%{
+        opacity: 1;
+    }
+    63%{
+        opacity: 1;
+    }
+    65%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes likesBasketball {
+    0%{
+        opacity: 0;
+    }
+    54%{
+        opacity: 0;
+    }
+    55%{
+        opacity: 1;
+    }
+    58%{
+        opacity: 1;
+    }
+    62%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes other {
+    0%{
+        opacity: 0;
+    }
+    63%{
+        opacity: 0;
+    }
+    65%{
+        opacity: 1;
+    }
+    67%{
+        opacity: 1;
+    }
+    69%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes music {
+    0%{
+        opacity: 0;
+    }
+    58%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    63%{
+        opacity: 1;
+    }
+    65%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes basket {
+    0%{
+        opacity: 0;
+    }
+    53%{
+        opacity: 0;
+    }
+    55%{
+        opacity: 1;
+    }
+    58%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes bro {
+    0%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 1;
+    }
+    49%{
+        opacity: 1;
+    }
+    51%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes brother {
+    0%{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    45%{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50%{
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    51%{
+        opacity: 0.3;
+        transform: scale(1.1);
+    }
+    53%{
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 0;
+
+    }
+}
+
+@keyframes card-1 {
+    0%{
+        transform: scale(0);
+    }
+    20%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    25%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    35%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes dreams {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0;
+    }
+    35%{
+        opacity: 1;
+    }
+    38%{
+        opacity: 1;
+    }
+    44%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes born {
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    30%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes takeoff {
+    0%{
+        width: 0px;
+    }
+    10%{
+        opacity: 1;
+        width: 500px;
+    }
+    20%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes earth {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-800%);
+    }
+}
+
+@keyframes asteroid {
+    0%{
+        transform: translateX(100%) translateY(100%) rotate(0deg);
+    }
+    20%{
+        transform: translateX(100%) translateY(100%) rotate(0deg);
+    }
+    50%{
+        transform: translateX(-300%) translateY(500%) rotate(180deg);
+    }
+    60%{
+        transform: translateX(-500%) translateY(500%) rotate(180deg) scale(0.3);
+    }
+    100%{
+        transform: translateX(-700%) translateY(-200%) rotate(360deg) scale(0.3);
+    }
+}
+
+@keyframes stars-2 {
+    0%{
+        transform: translateX(0) scale(1.5);
+    }
+    100%{
+        transform: translateX(-1%) scale(1.5);
+    }
+}
+
+@keyframes stars {
+    0%{
+        opacity: 0.2;
+        transform: translateX(0);
+    }
+    90%{
+        opacity: 0.2;
+        transform: translateX(-1.4%);
+    }
+    100%{
+        opacity: 0.5;
+        transform: translateX(-2%);
+    }
+}
+
+@keyframes planet2Moving {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        z-index: 0;
+        transform: translateX(-1000%);
+    }
+}
+
+@keyframes planet1Moving {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(450%);
+    }
+    100%{
+        z-index: 0;
+        transform: translateX(-500%);
+    }
+}
+
+@keyframes sun {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes ballMoving {
+    0%{
+        transform: translateY(0) rotate(90deg);
+    }
+    20%{
+        transform: translateY(350%) rotate(90deg);
+    }
+    25%{
+        transform: translateY(330%) rotate(0deg);
+    }
+    40%{
+        transform: translateY(-350%) rotate(0deg);
+    }
+    45%{
+        transform: translateY(-330%) rotate(90deg);
+    }
+    60%{
+        transform: translateY(350%) rotate(90deg);
+    }
+    65%{
+        transform: translateY(330%) rotate(0deg);
+    }
+    80%{
+        transform: translateY(-350%) rotate(0deg);
+    }
+    85%{
+        transform: translateY(-330%) rotate(90deg);
+    }
+    100%{
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+@keyframes backgroundColor {
+    0% {
+        background-color: #021631;
+    }
+    50%{
+        background-color: #03214a;
+    }
+    77%{
+        background-color: #010b19;
+    }
+    85%{
+        background-color: #010b19;
+    }
+    90%{
+        background-color: #042c62;
+    }
+    100% {
+        background-color: #021631;
+    }
+}
